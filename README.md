@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Joseph Aedan's Portfolio Page
 
 ```sh
 npm create astro@latest -- --template basics
