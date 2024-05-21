@@ -31,20 +31,25 @@ const baseUrl = import.meta.env.SITE;
   </body>
 </html>
 <style is:global>
+  :root {
+    color-scheme: light dark;
+  }
   body {
     margin: 40px auto;
-    max-width: 1000px;
+    max-width: 768px;
     line-height: 1.6;
     font-size: 18px;
-    color: #444;
     padding: 0 10px;
+    background-color: light-dark(#fff, #000);
+    color: light-dark(#000, #fff);
   }
+
   h1,
   h2,
   h3 {
     line-height: 1.2;
   }
   html {
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: "Times New Roman", Times, serif, sans-serif;
   }
 </style>
