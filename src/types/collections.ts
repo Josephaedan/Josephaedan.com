@@ -17,7 +17,7 @@ export type TechnologyFrontmatter = z.infer<typeof TechnologyFrontmatter>;
 
 export const ExperienceFrontmatter = z.object({
   Title: z.string(),
-  Subtitle: z.string(),
+  Company: z.string(),
   Date: z.string(),
   Published: z.date(),
   Technologies: z.array(z.string()),
