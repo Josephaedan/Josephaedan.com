@@ -7,6 +7,7 @@ const cardCollection = defineCollection({
     Title: z.string(),
     Subtitle: z.string(),
     Date: z.string(),
+    Published: z.date(),
   }),
 });
 // 3. Export a single `collections` object to register your collection(s)
