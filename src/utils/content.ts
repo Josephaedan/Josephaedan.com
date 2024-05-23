@@ -17,7 +17,6 @@ export async function getSortedContentFromCollection<ContentType>(
     entries.sort((a, b) => {
       return a.data[key] > b.data[key] ? -1 : 1;
     });
-    console.log(entries);
   }
   return Promise.all(
     entries.map(async (entry) => {
