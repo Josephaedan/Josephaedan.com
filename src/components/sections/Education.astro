@@ -1,0 +1,24 @@
+---
+import { getSortedContentFromCollection } from "@/utils/content";
+import type { EducationFrontmatter } from "@/types/collections";
+
+const allEducationContent =
+  await getSortedContentFromCollection<EducationFrontmatter>(
+    "education",
+    "Published"
+  );
+---
+
+<h2>Education</h2>
+{
+  allEducationContent.map((education) => (
+    <section>
+      <h3>{education.Title}</h3>
+      <p>
+        <span>{education.Subtitle}</span>
+        <span>{education.Date}</span>
+      </p>
+      <education.Content />
+    </section>
+  ))
+}
