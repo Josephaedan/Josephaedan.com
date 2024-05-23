@@ -1,110 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { getSortedContentFromCollection } from "@/utils/content";
+import Header from "@/components/sections/Header.astro";
+import NavigationBar from "@/components/sections/Navigation.astro";
+import AboutSection from "@/components/sections/About.astro";
+import EducationSection from "@/components/sections/Education.astro";
+import ExperienceSection from "@/components/sections/Experience.astro";
 import type {
   EducationFrontmatter,
   ExperienceFrontmatter,
   TechnologyFrontmatter,
 } from "@/types/collections";
 import { getCollection } from "astro:content";
-
-const allEducationContent =
-  await getSortedContentFromCollection<EducationFrontmatter>(
-    "education",
-    "Published"
-  );
-
-const allExperienceContent =
-  await getSortedContentFromCollection<ExperienceFrontmatter>(
-    "experience",
-    "Published"
-  );
+import Education from "@/components/sections/Education.astro";
 
 const allTechnologiesContent: TechnologyFrontmatter[] =
   await getCollection("technologies");
-console.log(allTechnologiesContent);
 ---
 
 <Layout title="Joseph Aedan Marcus">
   <main>
-    <header>
-      <img src="/images/me.webp" class="profile" alt="Joseph Aedan Marcus" />
-      <div>
-        <h1>Joseph Aedan Marcus</h1>
-        <p><strong>I write code and develop projects sometimes</strong></p>
-      </div>
-    </header>
-    <hr />
-    <nav>
-      <a href="/">Home</a> |
-      <a href="/blog">Blog</a> |
-      <a href="/resume">Resume</a>
-    </nav>
-    <hr />
-    <h2>About Me</h2>
-    <p>
-      I'm an aspiring software developer who recently graduated from the
-      National University of Singapore (NUS) with a Bachelor of Computing in
-      Computer Science. I took my first programming course in NUS in 2019 and
-      scored a B-, and have never looked back since. <br /><br />
-      In my free time, I enjoy working on my own projects, learning new technologies,
-      writing blog posts, climbing and hitting the gym.
-    </p>
-    <h2>Education</h2>
-    {
-      allEducationContent.map((education) => (
-        <section>
-          <h3>{education.Title}</h3>
-          <p>
-            <span>{education.Subtitle}</span>
-            <span>{education.Date}</span>
-          </p>
-          <education.Content />
-        </section>
-      ))
-    }
+    <Header />
+    <NavigationBar />
+    <AboutSection />
+    <EducationSection />
+    <ExperienceSection />
   </main>
 </Layout>
-
-<style>
-  img.profile {
-    width: 250px;
-    height: auto;
-  }
-
-  header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-
-    p {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    * {
-      margin: 2px 0px;
-    }
-  }
-</style>
