@@ -1,0 +1,49 @@
+---
+import { getSortedContentFromCollection } from "@/utils/content";
+import { type ExperienceFrontmatter } from "@/types/collections";
+import { getEntries } from "astro:content";
+
+const allExperienceContent =
+  await getSortedContentFromCollection<ExperienceFrontmatter>(
+    "experience",
+    "Published"
+  ).then((experiences) => {
+    return Promise.all(
+      experiences.map(async (experience) => {
+        const technologies = await getEntries(experience.Technologies);
+        return {
+          ...experience,
+          Technologies: technologies,
+        };
+      })
+    );
+  });
+// console.log(allExperienceContent);
+---
+
+  <h2>Experience</h2>
+  {
+    allExperienceContent.map((experience) => (
+      <section>
+        <h3>{experience.Company}</h3>
+        <p>
+          <span>{experience.Title}</span>
+          <span>{experience.Date}</span>
+        </p>
+        <experience.Content />
+        <ul>
+          <li>
+            <strong>
+            Tech Stack:
+            </strong>
+            {experience.Technologies.map((technology) => (
+              <a href={technology.data.URL}>
+                {technology.data.Title}
+              </a>
+              <span>&nbsp;</span>
+            ))}
+          </li>
+        </ul>
+      </section>
+    ))
+  }
