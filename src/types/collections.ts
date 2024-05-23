@@ -1,4 +1,5 @@
 import { z } from "astro/zod";
+import { reference } from "astro:content";
 
 export const EducationFrontmatter = z.object({
   Title: z.string(),
@@ -20,6 +21,6 @@ export const ExperienceFrontmatter = z.object({
   Company: z.string(),
   Date: z.string(),
   Published: z.date(),
-  Technologies: z.array(z.string()),
+  Technologies: z.array(reference("technologies")),
 });
 export type ExperienceFrontmatter = z.infer<typeof ExperienceFrontmatter>;

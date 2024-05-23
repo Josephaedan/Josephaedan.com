@@ -14,10 +14,10 @@ export async function getSortedContentFromCollection<ContentType>(
 ): Promise<(ContentType & MarkdownContent)[]> {
   const entries = await getCollection(collection);
   if (key) {
-    const coercedKey = key as keyof ContentEntryMap[keyof ContentEntryMap];
     entries.sort((a, b) => {
-      return a[coercedKey] < b[coercedKey] ? 1 : -1;
+      return a.data[key] > b.data[key] ? -1 : 1;
     });
+    console.log(entries);
   }
   return Promise.all(
     entries.map(async (entry) => {
@@ -25,7 +25,7 @@ export async function getSortedContentFromCollection<ContentType>(
       return {
         ...entry.data,
         Content,
-      };
+      } as unknown as ContentType & MarkdownContent;
     })
   );
 }
