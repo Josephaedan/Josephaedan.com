@@ -21,13 +21,14 @@ const allExperienceContent =
 // console.log(allExperienceContent);
 ---
 
-  <h2>Experience</h2>
+<h2>Experience</h2>
+<section>
   {
     allExperienceContent.map((experience) => (
-      <section>
+      <div>
         <h3>{experience.Company}</h3>
         <p>
-          <span>{experience.Title}</span>
+          <em>{experience.Title}</em>
           <span>{experience.Date}</span>
         </p>
         <experience.Content />
@@ -37,13 +38,14 @@ const allExperienceContent =
             Tech Stack:
             </strong>
             {experience.Technologies.map((technology) => (
-              <a href={technology.data.URL}>
-                {technology.data.Title}
+              <a href={technology.data.URL} target="_blank">
+                {technology.data.Title.trim()}
               </a>
               <span>&nbsp;</span>
             ))}
           </li>
         </ul>
-      </section>
+      </div>
     ))
   }
+  </section>

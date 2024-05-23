@@ -10,15 +10,17 @@ const allEducationContent =
 ---
 
 <h2>Education</h2>
-{
-  allEducationContent.map((education) => (
-    <section>
-      <h3>{education.Title}</h3>
-      <p>
-        <span>{education.Subtitle}</span>
-        <span>{education.Date}</span>
-      </p>
-      <education.Content />
-    </section>
-  ))
-}
+<section>
+  {
+    allEducationContent.map((education) => (
+      <div>
+        <h3>{education.Title}</h3>
+        <p>
+          <em>{education.Subtitle}</em>
+          <span>{education.Date}</span>
+        </p>
+        <education.Content />
+      </div>
+    ))
+  }
+</section>
