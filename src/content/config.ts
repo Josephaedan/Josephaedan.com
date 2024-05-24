@@ -1,5 +1,6 @@
 // 1. Import utilities from `astro:content`
 import {
+  AchievementFrontmatter,
   EducationFrontmatter,
   ExperienceFrontmatter,
   ProjectFrontmatter,
@@ -25,11 +26,7 @@ const experienceCollection = defineCollection({
 
 const achievementsCollection = defineCollection({
   type: "content",
-  schema: z.object({
-    Title: z.string(),
-    Date: z.string(),
-    Published: z.date(),
-  }),
+  schema: AchievementFrontmatter,
 });
 
 const projectsCollection = defineCollection({
