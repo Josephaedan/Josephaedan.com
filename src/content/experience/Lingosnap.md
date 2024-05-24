@@ -1,6 +1,6 @@
 ---
 Title: Mobile Software Engineer Intern
-Company: Lingosnap (Lalia Pte Ltd)
+Company: Lingosnap
 Date: 'Apr 2024 - Present'
 Published: 2024-05-01
 Technologies:
