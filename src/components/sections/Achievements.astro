@@ -1,0 +1,32 @@
+---
+import { getSortedContentFromCollection } from "@/utils/content";
+import { type ExperienceFrontmatter } from "@/types/collections";
+
+const allAchievementsContent =
+  await getSortedContentFromCollection<ExperienceFrontmatter>(
+    "achievements",
+    "Published"
+  );
+---
+
+<h2>Achievements</h2>
+<section>
+  {
+    allAchievementsContent.map((experience) => (
+      <div>
+        <div id="achievement-header">
+          <h3>{experience.Title}</h3>
+          <p>{experience.Date}</p>
+        </div>
+        <experience.Content />
+      </div>
+    ))
+  }
+</section>
+
+<style>
+  #achievement-header {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

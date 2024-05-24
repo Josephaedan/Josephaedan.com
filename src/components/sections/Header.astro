@@ -1,8 +1,32 @@
+---
+import type { ExperienceFrontmatter } from "@/types/collections";
+import { getSortedContentFromCollection } from "@/utils/content";
+const mostRecentExperience =
+  await getSortedContentFromCollection<ExperienceFrontmatter>(
+    "experience",
+    "Published"
+  ).then((content) => content[0]);
+---
+
 <header>
   <img src="/images/me.webp" class="profile" alt="Joseph Aedan Marcus" />
   <div>
     <h1>Joseph Aedan Marcus</h1>
-    <p><strong>I write code and develop projects sometimes</strong></p>
+    <p>
+      <strong>I write code and design applications sometimes.</strong><br />
+      Currently working as a {mostRecentExperience?.Title} at {
+        mostRecentExperience?.Company
+      }
+    </p>
+    <small class="contact">
+      <a href="https://github.com/josephaedan" target="_blank"
+        >github.com/josephaedan</a
+      > |
+      <a href="https://www.linkedin.com/in/josephaedan/" target="_blank"
+        >linkedin.com/in/josephaedan</a
+      > |
+      <a href="mailto:josephaedan@gmail.com">josephaedan@gmail.com</a>
+    </small>
   </div>
 </header>
 
@@ -23,5 +47,13 @@
       justify-content: center;
       text-align: center;
     }
+  }
+
+  small.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 8px;
   }
 </style>

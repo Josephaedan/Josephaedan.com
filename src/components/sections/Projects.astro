@@ -1,11 +1,11 @@
 ---
 import { getSortedContentFromCollection } from "@/utils/content";
-import { type ExperienceFrontmatter } from "@/types/collections";
+import type {ProjectFrontmatter } from "@/types/collections";
 import { getEntries } from "astro:content";
 
-const allExperienceContent =
-  await getSortedContentFromCollection<ExperienceFrontmatter>(
-    "experience",
+const allProjectsContent =
+  await getSortedContentFromCollection<ProjectFrontmatter>(
+    "projects",
     "Published"
   ).then((experiences) => {
     return Promise.all(
@@ -20,21 +20,16 @@ const allExperienceContent =
   });
 ---
 
-<h2>Experience</h2>
+<h2>Projects</h2>
 <section>
   {
-    allExperienceContent.map((experience) => (
+    allProjectsContent.map((experience) => (
       <div>
-        <h3>{experience.Company}</h3>
-        <p>
-          <em>{experience.Title}</em>
-          <span>{experience.Date}</span>
-        </p>
+        <a href={experience.URL} target="_blank"><h3>{experience.Title}</h3></a>
         <experience.Content />
-        <ul>
-          <li>
+        <p id="technologies">
             <strong>
-            Tech Stack:
+            Tech Stack:&nbsp;
             </strong>
             {experience.Technologies.map((technology) => (
               <a href={technology.data.URL} target="_blank">
@@ -42,9 +37,22 @@ const allExperienceContent =
               </a>
               <span>&nbsp;</span>
             ))}
-          </li>
-        </ul>
+        </p>
       </div>
     ))
   }
   </section>
+
+  <style>
+    section {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+
+      #technologies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+  </style>

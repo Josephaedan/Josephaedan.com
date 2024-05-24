@@ -1,21 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getSortedContentFromCollection } from "@/utils/content";
+import Footer from "@/components/sections/Footer.astro";
 import Header from "@/components/sections/Header.astro";
 import NavigationBar from "@/components/sections/Navigation.astro";
 import AboutSection from "@/components/sections/About.astro";
 import EducationSection from "@/components/sections/Education.astro";
 import ExperienceSection from "@/components/sections/Experience.astro";
-import type {
-  EducationFrontmatter,
-  ExperienceFrontmatter,
-  TechnologyFrontmatter,
-} from "@/types/collections";
-import { getCollection } from "astro:content";
-import Education from "@/components/sections/Education.astro";
-
-const allTechnologiesContent: TechnologyFrontmatter[] =
-  await getCollection("technologies");
+import AchievementsSection from "@/components/sections/Achievements.astro";
+import ProjectsSection from "@/components/sections/Projects.astro";
 ---
 
 <Layout title="Joseph Aedan Marcus">
@@ -25,5 +17,8 @@ const allTechnologiesContent: TechnologyFrontmatter[] =
     <AboutSection />
     <EducationSection />
     <ExperienceSection />
+    <AchievementsSection />
+    <ProjectsSection />
+    <Footer />
   </main>
 </Layout>
