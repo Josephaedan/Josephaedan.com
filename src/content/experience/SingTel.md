@@ -6,7 +6,7 @@ Published: 2023-06-01
 Technologies:
   - React
   - NextJS
-  - TypeScript
+  - Typescript
   - Java
   - Spring
   - PostgreSQL

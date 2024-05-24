@@ -5,7 +5,7 @@ Date: 'Jan 2024 - Apr 2024'
 Published: 2024-01-01
 Technologies:
   - React
-  - TypeScript
+  - Typescript
   - NodeJS
   - PostgreSQL
   - AWS_Lambda

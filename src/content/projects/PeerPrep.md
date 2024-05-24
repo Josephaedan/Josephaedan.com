@@ -6,7 +6,7 @@ Published: 2023-08-01
 Technologies:
   - React
   - NextJS
-  - TypeScript
+  - Typescript
   - Python
   - FastAPI
   - MongoDB

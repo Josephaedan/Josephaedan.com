@@ -6,7 +6,7 @@ Published: 2022-08-31
 Technologies:
   - React
   - NextJS
-  - TypeScript
+  - Typescript
   - Django
   - Python
   - MySQL
