@@ -1,7 +1,7 @@
 ---
 Title: Management Associate Intern (Full Stack Software Engineer) 
 Company: SingTel
-Date: 'June 2023 - August 2023'
+Date: 'Jun 2023 - Aug 2023'
 Published: 2023-06-01
 Technologies:
   - React

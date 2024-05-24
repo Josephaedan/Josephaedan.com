@@ -1,7 +1,7 @@
 ---
 Title: Full Stack Software Engineer Intern
 Company: WorkClass
-Date: 'August 2022 - November 2022'
+Date: 'Aug 2022 - Nov 2022'
 Published: 2022-08-31
 Technologies:
   - React
