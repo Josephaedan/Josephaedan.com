@@ -15,7 +15,11 @@ export async function getSortedContentFromCollection<ContentType>(
   const entries = await getCollection(collection);
   if (key) {
     entries.sort((a, b) => {
-      return a.data[key] > b.data[key] ? -1 : 1;
+      const { data: aData } = a;
+      const { data: bData } = b;
+      const coercedKeyA = key as keyof typeof aData;
+      const coercedKeyB = key as keyof typeof bData;
+      return a.data[coercedKeyA] > b.data[coercedKeyB] ? -1 : 1;
     });
   }
   return Promise.all(
