@@ -6,7 +6,7 @@ Published: 2022-08-01
 Technologies:
   - React
   - NextJS
-  - TypeScript
+  - Typescript
   - NodeJS
 ---
 
