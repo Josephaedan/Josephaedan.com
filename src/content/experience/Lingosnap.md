@@ -7,7 +7,7 @@ Technologies:
   - React_Native
   - Expo
   - NextJS
-  - TypeScript
+  - Typescript
 ---
 
 - Developed and maintained features for [Lingosnap](https://apps.apple.com/us/app/lingosnap-languages-photos/id6467396888), Lalia's language learning mobile application, using React Native and Expo
