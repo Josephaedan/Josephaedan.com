@@ -6,7 +6,7 @@ import {
   ProjectFrontmatter,
   TechnologyFrontmatter,
 } from "@/types/collections";
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 
 // 2. Define your collection(s)
 const educationCollection = defineCollection({
