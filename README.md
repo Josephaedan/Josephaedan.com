@@ -6,6 +6,8 @@
 
 I am an aspiring software engineer who recently graduated from the National University of Singapore (NUS) with a Bachelor of Computing (Honours) in Computer Science. This is my portfolio site where I showcase my experiences and projects.
 
+![image](https://github.com/Josephaedan/Josephaedan.com/assets/48595194/e0ef8cf1-ff79-4866-bf06-21a7022bd311)
+
 This portfolio follows a simplistic classic resume design with a focus on readability, accessibility and best SEO practices. The design is inspired from [Austin Z. Henley]("https://austinhenley.com/index.html") and [bettermotherfuckingwebsite]("http://bettermotherfuckingwebsite.com/").
 
 ## Technologies
