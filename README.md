@@ -8,20 +8,20 @@ I am an aspiring software engineer who recently graduated from the National Univ
 
 ![image](https://github.com/Josephaedan/Josephaedan.com/assets/48595194/e0ef8cf1-ff79-4866-bf06-21a7022bd311)
 
-This portfolio follows a simplistic classic resume design with a focus on readability, accessibility and best SEO practices. The design is inspired from [Austin Z. Henley]("https://austinhenley.com/index.html") and [bettermotherfuckingwebsite]("http://bettermotherfuckingwebsite.com/").
+This portfolio follows a simplistic classic resume design with a focus on readability, accessibility and best SEO practices. The design is inspired from [Austin Z. Henley](https://austinhenley.com/index.html) and [bettermotherfuckingwebsite](http://bettermotherfuckingwebsite.com/).
 
 ## Technologies
 
-This portfolio is made with [Astro]("https://astro.build/") and hosted on [Vercel]("https://vercel.com/") to allow for fast development and deployment with even faster performances. Each content is written in markdown and compiled using Astro's [Content Collection]("https://docs.astro.build/guides/content-collections") feature for extensibility and type safety.
+This portfolio is made with [Astro](https://astro.build/) and hosted on [Vercel](https://vercel.com/) to allow for fast development and deployment with even faster performances. Each content is written in markdown and compiled using Astro's [Content Collection](https://docs.astro.build/guides/content-collections) feature for extensibility and type safety.
 
-It also allows for an extensible [blog page]("https://josephaedan.com/blog") by rendering all blog posts located in `src/content/blog`.
+It also allows for an extensible [blog page](https://josephaedan.com/blog) by rendering all blog posts located in `src/content/blog`.
 
 ## Getting Started
 
 ### 1. Ensure that you have the following installed on your machine:
 
-- [Node.js]("https://nodejs.org/en/")
-- [npm]("https://www.npmjs.com/")
+- [Node.js](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/)
 
 ### 2. Clone the repository
 
