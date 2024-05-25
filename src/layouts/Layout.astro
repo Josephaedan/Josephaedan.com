@@ -14,15 +14,21 @@ const baseUrl = import.meta.env.SITE;
     <meta name="theme-color" content="#fff" />
     <meta
       name="description"
-      content="I write code and develop projects sometimes"
+      content="I write code and design applications sometimes"
     />
     <meta name="author" content="Joseph Aedan Marcus" />
     <meta name="keywords" content="Joseph, Aedan, Marcus, Portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="Joseph Aedan Marcus" />
+    <meta
+      property="og:description"
+      content="I write code and design applications sometimes"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={baseUrl} />
-    <!-- <meta property="og:image" content={`${baseUrl}/images/og-image.png`} /> -->
+    <meta property="og:image" content={`${baseUrl}/images/og-image.webp`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
