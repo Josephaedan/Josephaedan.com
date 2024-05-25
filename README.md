@@ -1,54 +1,50 @@
-# Joseph Aedan's Portfolio Page
+# Joseph Aedan Marcus's Portfolio Site
 
-```sh
-npm create astro@latest -- --template basics
+![Portfolio](./public/images/og-image.webp)
+
+## Introduction
+
+I am an aspiring software engineer who recently graduated from the National University of Singapore (NUS) with a Bachelor of Computing (Honours) in Computer Science. This is my portfolio site where I showcase my experiences and projects.
+
+This portfolio follows a simplistic classic resume design with a focus on readability, accessibility and best SEO practices. The design is inspired from [Austin Z. Henley]("https://austinhenley.com/index.html") and [bettermotherfuckingwebsite]("http://bettermotherfuckingwebsite.com/").
+
+## Technologies
+
+This portfolio is made with [Astro]("https://astro.build/") and hosted on [Vercel]("https://vercel.com/") to allow for fast development and deployment with even faster performances. Each content is written in markdown and compiled using Astro's [Content Collection]("https://docs.astro.build/guides/content-collections") feature for extensibility and type safety.
+
+It also allows for an extensible [blog page]("https://josephaedan.com/blog") by rendering all blog posts located in `src/content/blog`.
+
+## Getting Started
+
+### 1. Ensure that you have the following installed on your machine:
+
+- [Node.js]("https://nodejs.org/en/")
+- [npm]("https://www.npmjs.com/")
+
+### 2. Clone the repository
+
+```bash
+git clone https://github.com/Josephaedan/Josephaedan.com.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+### 3. Install dependencies
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### 4. Configure the environment variables
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Create a `.env` file in the root directory and add the following:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```env
+DEPLOYED_URL="http://localhost:3000"
+```
 
-## 🧞 Commands
+An example of the `.env` file can be found in the `.env.example` file.
 
-All commands are run from the root of the project, from a terminal:
+### 5. Start the development server
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+npm run dev
+```
