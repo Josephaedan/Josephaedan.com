@@ -69,6 +69,11 @@ const baseUrl = import.meta.env.SITE;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
     }
 
     * {
