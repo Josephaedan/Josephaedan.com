@@ -6,4 +6,4 @@ Published: 2024-07-31
 ---
 
 - Recipient of the [Singapore Digital (SG:D) Scholarship 2021](https://www.imda.gov.sg/how-we-can-help/singapore-digital-scholarship/undergraduate)
-- Graduated with a CAP of 4.67/5.0
+- Graduated with a GPA of 4.57/5.0
